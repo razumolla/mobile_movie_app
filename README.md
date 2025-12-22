@@ -38,6 +38,6 @@ This command will move the starter code to the **app-example** directory and cre
 ## Working on mobile app
 
 ```bash
-1.
+1. npm install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
 
 ```
