@@ -1,16 +1,20 @@
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View className="flex-1 items-center justify-center">
-      <Text className="text-xl font-bold text-accent">
-        Welcome to Nativewind!
-      </Text>
+      <Link href="/onboarding">
+        <Text className="text-2xl font-bold text-light-300">
+          Onboarding link
+        </Text>
+      </Link>
 
-      <Text className="text-2xl font-bold text-light-300">
-        {" "}
-        Welcome to Sohel
-      </Text>
+      <Link href="/movie/avengers">
+        <Text className="text-2xl font-bold text-light-300">
+          avengers Movie
+        </Text>
+      </Link>
     </View>
   );
 }

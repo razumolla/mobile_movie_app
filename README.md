@@ -37,7 +37,11 @@ This command will move the starter code to the **app-example** directory and cre
 
 ## Working on mobile app
 
+### nativewind setup
+
 ```bash
 1. npm install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
 
 ```
+
+### create component snipet cmd: rnfes
