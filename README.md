@@ -44,6 +44,16 @@ This command will move the starter code to the **app-example** directory and cre
 
 ```
 
-### create component snipet cmd: rnfes
+### create react native component snipet cmd: rnfes
 
-40
+## Third Party movie api: [(movie-api)](https://www.themoviedb.org/)
+
+### Api document link: [(movie-api)](https://developer.themoviedb.org/docs/getting-started)
+
+### TMDB Account:
+
+- razumolla/@fe9hf\_!nB5C!2X/razu.molla@jouleslabs.xyz
+
+### Discover movie:
+
+- https://developer.themoviedb.org/reference/discover-movie
