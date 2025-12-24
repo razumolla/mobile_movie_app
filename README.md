@@ -50,10 +50,22 @@ This command will move the starter code to the **app-example** directory and cre
 
 ### Api document link: [(movie-api)](https://developer.themoviedb.org/docs/getting-started)
 
-### TMDB Account:
-
-- razumolla/@fe9hf\_!nB5C!2X/razu.molla@jouleslabs.xyz
-
-### Discover movie:
+### Discover movie link:
 
 - https://developer.themoviedb.org/reference/discover-movie
+
+## Appwrite : https://appwrite.io/
+
+```bash
+
+   npm install react-native-appwrite react-native-url-polyfill
+
+```
+
+## mask view
+
+```bash
+
+   npm i @react-native-masked-view/masked-view
+
+```
