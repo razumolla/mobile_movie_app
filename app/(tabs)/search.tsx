@@ -9,7 +9,7 @@ import MovieDisplayCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { updateSearchCount } from "@/services/appwrite";
-import useFetch from "@/services/useFetch";
+import useFetch from "@/services/usefetch";
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
