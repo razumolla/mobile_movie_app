@@ -1,27 +1,43 @@
+import { icons } from "@/constants/icons";
+import { useSavedMovies } from "@/store/useSavedMovies";
 import { Link } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
-import { icons } from "@/constants/icons";
+const MovieCard = (movie: Movie) => {
+  const { id, poster_path, title, vote_average, release_date } = movie;
 
-const MovieCard = ({
-  id,
-  poster_path,
-  title,
-  vote_average,
-  release_date,
-}: Movie) => {
+  const { toggle, isSaved } = useSavedMovies();
+  const saved = isSaved(id);
+
   return (
     <Link href={`/movie/${id}`} asChild>
       <TouchableOpacity className="w-[30%]">
-        <Image
-          source={{
-            uri: poster_path
-              ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : "https://placehold.co/600x400/1a1a1a/FFFFFF.png",
-          }}
-          className="w-full h-52 rounded-lg"
-          resizeMode="cover"
-        />
+        <View className="relative">
+          <Image
+            source={{
+              uri: poster_path
+                ? `https://image.tmdb.org/t/p/w500${poster_path}`
+                : "https://placehold.co/600x400/1a1a1a/FFFFFF.png",
+            }}
+            className="w-full h-52 rounded-lg"
+            resizeMode="cover"
+          />
+
+          {/* Save button overlay */}
+          <TouchableOpacity
+            onPress={(e) => {
+              e.stopPropagation?.(); // prevents opening details on some platforms
+              toggle(movie);
+            }}
+            className="absolute top-2 right-2 bg-black/60 rounded-full p-2"
+          >
+            <Image
+              source={icons.save}
+              className="w-4 h-4"
+              tintColor={saved ? "#AB8BFF" : "#fff"}
+            />
+          </TouchableOpacity>
+        </View>
 
         <Text className="text-sm font-bold text-white mt-2" numberOfLines={1}>
           {title}
